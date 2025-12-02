@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="random.js"></script>
+</head>
+<body>
+    <main>
+        <canvas id="glCanvas"></canvas>
+        <script src="./shader.js"></script>
+
+            <div class="rain-container">
+                <div class="suit-wrapper"><span class="suit heart"></span></div>
+                <div class="suit-wrapper"><span class="suit diamond"></span></div>
+                <div class="suit-wrapper"><span class="suit club"></span></div>
+                <div class="suit-wrapper"><span class="suit spade"></span></div>
+                <div class="suit-wrapper"><span class="suit heart"></span></div>
+                <div class="suit-wrapper"><span class="suit diamond"></span></div>
+                <div class="suit-wrapper"><span class="suit club"></span></div>
+                <div class="suit-wrapper"><span class="suit spade"></span></div>
+                <div class="suit-wrapper"><span class="suit heart"></span></div>
+                <div class="suit-wrapper"><span class="suit diamond"></span></div>
+                <div class="suit-wrapper"><span class="suit club"></span></div>
+                <div class="suit-wrapper"><span class="suit spade"></span></div>
+                <div class="suit-wrapper"><span class="suit heart"></span></div>
+                <div class="suit-wrapper"><span class="suit diamond"></span></div>
+                <div class="suit-wrapper"><span class="suit club"></span></div>
+                <div class="suit-wrapper"><span class="suit spade"></span></div>
+                <div class="suit-wrapper"><span class="suit heart"></span></div>
+                <div class="suit-wrapper"><span class="suit diamond"></span></div>
+                <div class="suit-wrapper"><span class="suit club"></span></div>
+                <div class="suit-wrapper"><span class="suit spade"></span></div>
+            </div>
+
+        <div class="orbit">
+
+            <div class="scene" id="s1">
+            
+                
+                <div class="cube" id="d1" >
+                    <div class="face">
+                        <img src="img/1.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/2.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/3.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/4.png"  alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/5.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/6.png" alt="meaus">
+                    </div>
+                </div>
+            </div>
+            <div class="scene" id="s2">
+                <div class="cube" id="d2">
+                    <div class="face">
+                        <img src="img/1.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/2.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/3.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/4.png"  alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/5.png" alt="meaus">
+                    </div>
+                    <div class="face">
+                        <img src="img/6.png" alt="meaus">
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <H1 id="rotatingText" style="font-family: kiwi;"> <img src="img/Title.png" alt=""></H1>
+
+        <div class="mainPanel">
+            <h2>Welcome to <U style="color: gold;">BLACKLUCK</U></h2>
+            
+            <div class="cards-container">
+                <div class="Card">
+                    <div class="CardBase"></div>
+                    <div id="c1"></div>
+                </div>
+                <div class="Card">
+                    <div class="CardBase"></div>
+                    <div id="c2"></div>
+                </div>
+                <div class="Card">
+                    <div class="CardBase"></div>
+                    <div id="c3"></div>
+                </div>
+                <div class="Card">
+                    <div class="CardBase"></div>
+                    <div id="c4"></div>
+                </div>
+            </div>
+            <p>BlackLuck is a blend of blackjack strategy and roguelite chaos.
+                In this twisted take on the classic casino game, every hand is a risk, every choice is a gamble, and every card can turn the tide.
+                
+                Build your deck with special-effect cards that bend the rules, break expectations, and open up wild new strategies. Fight your way through escalating rounds where the bets grow higher, the challenges grow tougher, and your luck is pushed to the limit.
+                
+                Will you play it safe… or push your fortune into dangerous territory?
+                Test your strategy, tempt fate, and discover just how far your luck can carry you in BLACKLUCK.
+            </p>
+                <h2> Meet The <strike style="color: red;">Gang</strike> Cards</h2>
+
+                <div class="cardCarousel">
+
+                    <div class="Deck"></div>
+                
+                    <div class="carousel-cards">
+                        <div class="CardDisplay" data-desc="Increases your point limit by 1.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Limit Breaker</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Doubles your money instantly.">
+                            <div class="CardBase"></div>
+                            <div class="overlay cycle" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(8 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Cashout</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Duplicates the last card drawn.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(9 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Cloner</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Burns to embers when the player busts.">
+                            <div class="CardBase" style="background-image: url(img/card_base_atlas.png); background-position: calc(2 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="overlay cycle" style="background-image: url(img/suit_overlay_atlas.png); background-position: calc(12 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Burner Card</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Pretty fragile?breaks at a touch.">
+                            <div class="CardBase" style="background-image: url(img/card_base_atlas.png); background-position: calc(5 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="overlay cycle" style="background-image: url(img/suit_overlay_atlas.png); background-position: calc(12 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Glass Card</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Has a 50/50 chance to either reduce its value by 1 or become a 10 marked with a red cross.">
+                            <div class="CardBase" style="background-image: url(img/card_base_atlas.png); background-position: calc(5 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="overlay cycle" style="background-image: url(img/suit_overlay_atlas.png); background-position: calc(12 * -71px) calc(2 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Stone Card</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="For this round, any card played that is not of the chosen suit is burned.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" id="burnSuit" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(12 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Burning Suit</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="For this round, your opponent cannot draw cards.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(2 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Blocked</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Turns the cards in your hand into Burning Cards.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(6 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Burning Hand</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Turns the cards in your hand into Glass Cards.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(7 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Glass Hand</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Scratch this card for a chance to win instantly! Match three 7s to win the round. If not, you'll receive a 7 of Hearts.">
+                            <div class="CardBase" style="background-image: url(img/card_base_atlas.png); background-position: calc(4 * -71px) calc(2 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="overlay scratcher" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(3 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Scratcher</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Reveals the dealer?s first hand.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(9 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Revelation</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Swaps your hand with the dealer?s. Let fate decide who wins.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(3 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Hand Swap</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Burns both your hand and the dealer?s, then redeals new cards to each.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Ashes to Ashes</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Flip a coin! Heads adds a 10, tails gives a 2.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(3 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="miniDisplay">
+                                <div class="CardBase"></div>
+                                <div class="overlay CoinAnim" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(4 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Rolls a dice and gives you a dice card of that value.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(4 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Lucky Dice</div>
+                            <div class="miniDisplay">
+                                <div class="CardBase"></div>
+                                <div class="overlay DiceAnim" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(4 * -71px) calc(1 * -95px); width: 71px; height: 95px;"></div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="CardDisplay" data-desc="you can draw this card at will.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Pocket Card</div>
+                        </div>
+                        <div class="CardDisplay" data-desc="Your next hit can?t bust, even if it exceeds 21.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Safe Hit</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="The dealer automatically draws one extra card.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Dealer?s Blunder</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Swap one random card from your hand with one from the dealer.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Stack Swap</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Draw two cards and discard one of your choice.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Lucky Draw</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="The dealer?s total becomes equal to yours ? a guaranteed tie.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Mirror Match</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="+1 to every card you draw for the next 3 rounds (max 21).">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px);width: 71px; height: 95px;"></div>
+                            <div class="CardName">Fortune Aura</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="You can preview your next hit before deciding whether to draw it.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Focused Mind</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Any card you draw turns into an Ace.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px);width: 71px; height: 95px;"></div>
+                            <div class="CardName">Ace of Fate</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="Revert both hands to their state from one round ago.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(0 * -71px) calc(0 * -95px);width: 71px; height: 95px;"></div>
+                            <div class="CardName">Time Rewind</div>
+                        </div> -->
+                        
+                        <div class="CardDisplay" data-desc="Draw 3 cards at once and keep any 2 of them.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(2 * -71px) calc(2 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Cardstorm</div>
+                        </div>
+                        
+                        <div class="CardDisplay" data-desc="All cards on the table change to random values between 1 and 11.">
+                            <div class="CardBase"></div>
+                            <div class="overlay" style="background-image: url(img/Sp_cards_atlas.png); background-position: calc(1 * -71px) calc(2 * -95px); width: 71px; height: 95px;"></div>
+                            <div class="CardName">Quantum Flip</div>
+                        </div>
+                        
+                    </div>
+                
+                    <div class="Deck" id="de2"></div>
+                </div>
+                
+                <div class="cardDescription">
+                    Card Description.
+                </div>
+
+                <div class="uibuttons">
+                    <button id="prevCard">Previous</button>
+                    <button id="nextCard">Next</button>
+                </div>
+                <script src="CardSelector.js"></script>
+                
+            </div>
+
+    </main>
+</body>
+</html>
