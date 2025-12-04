@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial display
     showCards(currentIndex);
 
-    document.getElementById("nextCard").addEventListener("click", () => {
+    document.getElementById("de2").onmousedown = function() {
         currentIndex = (currentIndex + 1) % cards.length;
         showCards(currentIndex);
-    });
+    };
 
-    document.getElementById("prevCard").addEventListener("click", () => {
+    document.getElementById("de1").onmousedown = function() {
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         showCards(currentIndex);
-    });
+    };
 });
